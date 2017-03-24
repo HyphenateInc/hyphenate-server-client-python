@@ -7,7 +7,7 @@ import time
 from requests.auth import AuthBase
 from hyphenateserver.utils.loggers import Logger
 from hyphenateserver.utils.http_utils import http_post
-from hyphenateserver.utils.confs import api_host
+from hyphenateserver.configs import api_host
 
 
 class Token(object):

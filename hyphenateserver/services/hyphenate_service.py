@@ -17,11 +17,17 @@ class EMIMUsersService(object):
         self.app = app
         self.auth = auth
 
-    def create_new_user(self, payload):
-        """regsiter a new user"""
+    def create_new_user(self, username, password):
+        """register new Hyphenate user account
+        POST /{org}/{app}/users {"username":"xxxxx", "password":"yyyyy"}
+        """
 
+        payload = {"username": username, "password": password}
         url = ('/%s/%s/users' % (self.org, self.app))
         return http_post(url, payload, self.auth)
+
+        url = HYPHENATE_HOST + ("/%s/%s/users" % (org, app))
+        return post(url, payload, auth)
 
     def im_user_login(self, payload):
         """user login"""

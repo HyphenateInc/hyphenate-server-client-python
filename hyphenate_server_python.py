@@ -175,7 +175,7 @@ if __name__ == '__main__':
             print "registered new user %s with API key[%s]" % (test_username, test_app_key)
             app_users.append(test_username)
         else:
-            print "failed to register new user %s in appkey[%s]" % (test_username, test_app_key)
+            print "failed to register new user %s in API key[%s]" % (test_username, test_app_key)
 
     print "now let's delete users just created, this time we're using app_client_auth"
 
@@ -184,9 +184,9 @@ if __name__ == '__main__':
         if test_success:
             print "user[%s] is deleted from API key[%s]" % (test_username, test_app_key)
         else:
-            print "failed to delete user[%s] from appkey[%s]" % (test_username, test_app_key)
+            print "failed to delete user[%s] from API key[%s]" % (test_username, test_app_key)
 
     print "now let's send an image"
-    test_success, test_result = upload_file(org_name, app_name, app_client_auth, '../zjg.jpg')
+    test_success, test_result = upload_file(org_name, app_name, app_client_auth, '../tests/zjg.jpg')
 
     print test_result

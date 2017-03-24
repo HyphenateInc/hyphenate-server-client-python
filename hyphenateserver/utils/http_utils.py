@@ -5,7 +5,7 @@ __author__ = 'Hyphenate Inc'
 import requests
 import json
 
-from confs import *
+from configs import *
 from hyphenateserver.utils.loggers import Logger
 
 

@@ -5,7 +5,7 @@ __author__ = 'Hyphenate Inc'
 
 from hyphenateserver.utils.types import *
 from hyphenateserver.services.hyphenate_service import *
-from hyphenateserver.utils.confs import *
+from hyphenateserver.configs import *
 
 
 def get_instance(service_type):
