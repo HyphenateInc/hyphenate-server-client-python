@@ -3,9 +3,9 @@
 __author__ = 'Hyphenate Inc'
 
 
-from emchat.utils.http_utils import http_get, http_post, file_upload, get_file_stream, http_put
-from emchat.utils.file_utils import write
-from emchat.utils.loggers import Logger
+from hyphenateserver.utils.http_utils import http_get, http_post, file_upload, get_file_stream, http_put
+from hyphenateserver.utils.file_utils import write
+from hyphenateserver.utils.loggers import Logger
 
 
 class EMIMUsersService(object):

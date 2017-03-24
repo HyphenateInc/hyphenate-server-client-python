@@ -5,10 +5,10 @@ __author__ = 'Hyphenate Inc'
 import unittest
 import json
 
-import emchat.client.emchat_client as rest_client
+import hyphenateserver.client.client as rest_client
 
-from emchat.utils.types import *
-from emchat.utils.loggers import Logger
+from hyphenateserver.utils.types import *
+from hyphenateserver.utils.loggers import Logger
 
 
 class TestChatFilesServices(unittest.TestCase):

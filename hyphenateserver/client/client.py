@@ -3,9 +3,9 @@
 __author__ = 'Hyphenate Inc'
 
 
-from hyphenate_server.utils.types import *
-from hyphenate_server.services.emchat_service import *
-from hyphenate_server.utils.confs import *
+from hyphenateserver.utils.types import *
+from hyphenateserver.services.emchat_service import *
+from hyphenateserver.utils.confs import *
 
 
 def get_instance(service_type):

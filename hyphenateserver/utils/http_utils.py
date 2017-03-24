@@ -6,7 +6,7 @@ import requests
 import json
 
 from confs import *
-from emchat.utils.loggers import Logger
+from hyphenateserver.utils.loggers import Logger
 
 
 DEBUG = False

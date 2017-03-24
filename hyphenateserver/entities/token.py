@@ -5,9 +5,9 @@ __author__ = 'Hyphenate Inc'
 
 import time
 from requests.auth import AuthBase
-from emchat.utils.loggers import Logger
-from emchat.utils.http_utils import http_post
-from emchat.utils.confs import api_host
+from hyphenateserver.utils.loggers import Logger
+from hyphenateserver.utils.http_utils import http_post
+from hyphenateserver.utils.confs import api_host
 
 
 class Token(object):
