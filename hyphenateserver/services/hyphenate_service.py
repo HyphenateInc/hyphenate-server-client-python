@@ -18,7 +18,7 @@ class EMIMUsersService(object):
         self.auth = auth
 
     def create_new_user(self, payload):
-        """regsiter IM user"""
+        """regsiter a new user"""
 
         url = ('/%s/%s/users' % (self.org, self.app))
         return http_post(url, payload, self.auth)

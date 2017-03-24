@@ -37,17 +37,18 @@ f.close()
 
 
 setup(
-    name='hyphenate-server-client-python',
+    name='hyphenateserver',
     version=_version_,
     description='Python Client Library for Hyphenate REST API',
     long_description=long_description,
-    url='github.com/HyphenateInc/hyphenate-server-client-python',
+    url='https://github.com/HyphenateInc/hyphenate-server-client-python',
     author='Hyphenate Inc',
     author_email='info@hyphenate.io',
-    maintainer='Hyphenate[http://www.hyphenate.io]',
+    maintainer='Hyphenate[https://www.hyphenate.io]',
     maintainer_email='support@hyphenate.io',
-    keywords=['hyphenate', 'rest', 'api', 'emchat', 'im', 'usergrid'],
-    packages=['hyphenate-client-python'],
+    license='Apache 2.0',
+    keywords=['hyphenate', 'rest', 'api', 'client library', 'im'],
+    packages=['hyphenateserver'],
     tests_require=['pytest>=2.7.0'],
     cmdclass={'test': PyTest}
 )

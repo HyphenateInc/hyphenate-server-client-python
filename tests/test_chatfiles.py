@@ -2,20 +2,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'Hyphenate Inc'
 
-import unittest
-import json
-
-import hyphenateserver.client.client as rest_client
-
-from hyphenateserver.utils.types import *
-from hyphenateserver.utils.loggers import Logger
-
-
-class TestChatFilesServices(unittest.TestCase):
-    logger = Logger.get_logger('TestChatFilesServices.class')
-    service_files = rest_client.get_instance(service_chatfiles)
-
-    def test_upload_file(self):
+import hyphenate_service
         """upload file"""
 
         self.logger.info('------------api:uploading files... --------------------------------')
