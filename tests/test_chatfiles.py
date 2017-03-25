@@ -11,8 +11,31 @@ from hyphenateserver.utils.types import *
 from hyphenateserver.utils.loggers import Logger
 
 
+class TestMessagingServices(unittest.TestCase):
+    logger = Logger.get_logger('TestMessagingServices.class')
+    service_messaging = rest_client.get_instance(service_messages)
+
+    def test_send_message(self):
+        """send message"""
+
+        self.logger.info('------------test: send message--------------------------------')
+
+        resp = []
+        try:
+            # TODO: update send_messages function to handle parameters instead of payload
+            resp = self.service_messaging.send_messages(payload)
+            self.assertTrue(resp[0])
+            self.logger.info('message sent ok, response:' + json.dumps(resp[1]))
+            self.logger.info('message sent.\n')
+        except AssertionError:
+            self.logger.error('api: send_messages, result:failed, ' +
+                              'reason: ' + str(resp[1]['error_description']) + '\n')
+            raise Exception('function: send_messages, result:failed, ' +
+                            'reason: ' + str(resp[1]['error_description']))
+
+
 class TestChatFilesServices(unittest.TestCase):
-    logger = Logger.get_logger('TestEaseMobChatFilesServices.class')
+    logger = Logger.get_logger('TestChatFilesServices.class')
     service_files = rest_client.get_instance(service_chatfiles)
 
     def test_upload_file(self):

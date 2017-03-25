@@ -18,20 +18,16 @@ class EMIMUsersService(object):
         self.auth = auth
 
     def create_new_user(self, username, password):
-        """register new Hyphenate user account
-        POST /{org}/{app}/users {"username":"xxxxx", "password":"yyyyy"}
-        """
+        """register new Hyphenate user account"""
 
         payload = {"username": username, "password": password}
         url = ('/%s/%s/users' % (self.org, self.app))
         return http_post(url, payload, self.auth)
 
-        url = HYPHENATE_HOST + ("/%s/%s/users" % (org, app))
-        return post(url, payload, auth)
-
-    def im_user_login(self, payload):
+    def im_user_login(self, username, password):
         """user login"""
 
+        payload = {"username": username, "password": password}
         url = ('/%s/%s/users' % (self.org, self.app))
         return http_post(url, payload)
 
@@ -118,6 +114,8 @@ class EMMessagesService(object):
         self.app = app
         self.auth = auth
 
+    # TODO: update send_messages function to handle parameters instead of payload 
     def send_messages(self, payload):
+        # payload = {"username": username}
         url = ('/%s/%s/messages' % (self.org, self.app))
         return http_post(url, payload, self.auth)
